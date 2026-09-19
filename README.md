@@ -42,7 +42,7 @@ Track total study time
 SQLite database
 Responsive web interface
 
-**## Technologies**
+## Technologies
 Python
 Flask
 SQLite
