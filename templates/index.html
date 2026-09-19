@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<div class="add-section">
+    <a href="/add" class="add-button">+ Add Session</a>
+</div>
+    <h1>Dashboard</h1>
+
+    <div>
+        <h2>Total Sessions</h2>
+        <p>{{ stats.session_count }}</p>
+    </div>
+
+    <div>
+        <h2>Total Study Time</h2>
+        <p>{{ hours }} hours {{ remaining_minutes }} minutes</p>
+    </div>
+
+    <h2>Study Sessions</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Subject</th>
+                <th>Minutes</th>
+                <th>Date</th>
+                <th>Notes</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for session in sessions %}
+                <tr>
+                    <td>{{ session.subject }}</td>
+                    <td>{{ session.minutes }}</td>
+                    <td>{{ session.date }}</td>
+                    <td>{{ session.notes }}</td>
+                    <td>
+                        <form action="/delete" method="post">
+                            <input type="hidden" name="id" value="{{ session.id }}">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

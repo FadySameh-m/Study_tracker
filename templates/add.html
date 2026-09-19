@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <h1>Add Study Session</h1>
+
+    <form action="/add" method="post">
+
+        <div>
+            <label for="subject">Subject</label>
+            <input
+                id="subject"
+                type="text"
+                name="subject"
+                placeholder="e.g. CS50"
+                required
+            >
+        </div>
+
+        <div>
+            <label for="minutes">Minutes</label>
+            <input
+                id="minutes"
+                type="number"
+                name="minutes"
+                min="1"
+                placeholder="e.g. 60"
+                required
+            >
+        </div>
+
+        <div>
+            <label for="date">Date</label>
+            <input
+                id="date"
+                type="date"
+                name="date"
+                required
+            >
+        </div>
+
+        <div>
+            <label for="notes">Notes</label>
+            <input
+                id="notes"
+                type="text"
+                name="notes"
+                placeholder="What did you study?"
+            >
+        </div>
+
+        <button type="submit">Add Session</button>
+
+    </form>
+
+{% endblock %}
