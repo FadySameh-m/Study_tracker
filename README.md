@@ -33,3 +33,20 @@ The tracker.db file is the SQLite database used by the application. It stores us
 I chose Flask because it provides a simple way to connect Python code with HTML templates and handle web requests. I chose SQLite because the project does not require a large database system and SQLite is simple to use while still allowing the application to store structured data persistently.
 
 The project combines several of the technologies and concepts learned throughout CS50x, including Python, SQL, Flask, HTML, CSS, databases, authentication, sessions, and web application development.
+
+## Features
+User registration and login
+Password hashing
+Add and delete study sessions
+Track total study time
+SQLite database
+Responsive web interface
+
+**## Technologies**
+Python
+Flask
+SQLite
+CS50 SQL
+HTML
+CSS
+Jinja2
